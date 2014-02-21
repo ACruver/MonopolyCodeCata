@@ -23,16 +23,18 @@ define(function (require) {
         beforeEach(function () {
             // some logic that gets executed before each test suite runs.
             // possibly need to reset player location? Create new board? etc.
+            player1 = new Player(0);
         });
 
         describe('Player Movement', function () {
 
             it('Player on beginning location (numbered 0), rolls 7, ends up on location 7', function () {
-
+                expect(player1.Movement(player1.location, 7)).toEqual(7);
             });
 
             it('Player on location numbered 39, rolls 6, ends up on location 5', function () {
-
+                player1.location = 39;
+                expect(player1.Movement(player1.location, 6)).toEqual(5);
             });
         });
     });
