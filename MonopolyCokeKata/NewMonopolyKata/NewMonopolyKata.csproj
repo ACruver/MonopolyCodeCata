@@ -117,6 +117,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="app\game.js" />
     <Content Include="app\main.js" />
     <Content Include="app\board.js" />
     <Content Include="app\player.js" />

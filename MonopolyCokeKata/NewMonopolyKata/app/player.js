@@ -7,21 +7,24 @@
 define(function () {
     "use strict";
 
-    function Player(location) {
+    function Player(location, name) {
         this.location = location;
+        this.name = name;
     }
-    Player.prototype.Movement = function Player_Movement(location, movementNumber) {
+
+    Player.prototype.movement = function Player_Movement(location, movementNumber) {
         var finalLocation = (location + movementNumber) % 40;
         return finalLocation;
-    }
+    };
 
-    Player.prototype.Dice = function Player_Dice() {
+    Player.prototype.dice = function payer_dice() {
         return _.sample([1, 2, 3, 4, 5, 6]);
-    }
+    };
 
-    Player.prototype.Roll = function Player_Roll() {
-        var rollCount = this.Dice() + this.Dice();
+    Player.prototype.roll = function player_roll() {
+        var rollCount = this.dice() + this.dice();
         return rollCount;
-    }
+    };
+
     return Player;
 });
